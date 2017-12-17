@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: [
@@ -26,6 +27,7 @@ module.exports = {
 				js: ['index.js'],
 			},
 		}),
+		new CopyWebpackPlugin([{ context: path.resolve(__dirname), from: '*CNAME' }]),
 	],
 
 	/* plugins: process.argv.indexOf('-p') === -1 ? [] : [
