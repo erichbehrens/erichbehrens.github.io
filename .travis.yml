@@ -9,9 +9,7 @@ node_js:
 script:
   - npm run lint
   - npm run build
-  - npm run deploy
 
-before_deploy: git config --global user.email publish@travis.github && git config --global user.name "Travis"
 deploy:
   provider: pages
   skip_cleanup: true
