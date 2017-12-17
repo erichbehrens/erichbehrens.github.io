@@ -16,8 +16,7 @@ deploy:
   skip_cleanup: true
   github_token: $github_token
   local_dir: build
-  on:
-    branch: master
+  target_branch: master
 
 branches:
   except:
