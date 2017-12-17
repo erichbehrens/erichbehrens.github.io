@@ -8,12 +8,12 @@ node_js:
 
 script:
   - npm run lint
-  - npm run build:pages
+  - npm run deploy
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
-  local_dir: pages
+  local_dir: build
   on:
     branch: master
