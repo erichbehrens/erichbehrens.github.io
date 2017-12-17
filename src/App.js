@@ -19,7 +19,7 @@ const repositories = [
 		title: 'react-on-scroll',
 		description: 'Animate on scroll, lazy load, infinite scroll component for react',
 	},
-]
+];
 
 function App() {
 	return <div>
@@ -28,7 +28,9 @@ function App() {
 			{repositories.map(repo => <li key={repo.url}>
 				<h3>{repo.title}</h3>
 				<div>
-				 <span className="small">{repo.type}</span>{repo.description}</div>
+					<span className="small">{repo.type}</span>
+					{repo.description}
+				</div>
 				<a href={repo.url} target="_blank">View on GitHub</a>
 			</li>)}
 		</ul>
