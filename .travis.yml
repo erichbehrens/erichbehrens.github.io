@@ -8,6 +8,7 @@ node_js:
 
 script:
   - npm run lint
+  - npm run build
   - npm run deploy
 
 deploy:
@@ -17,3 +18,7 @@ deploy:
   local_dir: build
   on:
     branch: master
+
+branches:
+  except:
+    - master
