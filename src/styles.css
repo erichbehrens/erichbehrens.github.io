@@ -9,41 +9,59 @@ body {
     font-family: 'Bree Serif', sans-serif;
     font-size: 1.25em;
     background: #111;
-    color: white;
+    color: #dddccc;
     text-align: center;
 }
 
 h1 {
     font-size: 3em;
+    color: #f6ff00;
 }
 
 h2 {
     font-size: 1.5em;
+    margin-bottom: .25em;
+    color: #f6ff00;
 }
 
 h3 {
     font-size: 1.25em;
+    margin-bottom: .25em;
+    color: #dddccc;
 }
 
 .header {
     background: black;
-}
+    padding-bottom: 1em;
 
-.repositories {
-    list-style: none;
-    & li {
-        margin-top: 1em;
-        margin-bottom: 1em;
+    & h2 {
+        color: #dddccc;
     }
 }
 
 a {
     text-decoration: none;
-    color: #f9da27;
+    color: #fff568;
+  position: relative;
+
+    &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px dashed #f6ff00;
+    transition: 0.4s;
+    transform: scaleX(0);
+    width: 100%;
+    }
 }
 
 a:hover {
-    color: #ffe347;
+    color: #f6ff00;
+
+    &:after {
+    transform: scaleX(1)
+}
 }
 
 .footer {
