@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif'); /* neuton / pridi / Headland One */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 1.25em;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+.header {
+    background: black;
+}
+
+.repositories {
+    list-style: none;
+    & li {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #f9da27;
+}
+
+a:hover {
+    color: #ffe347;
+}
+
+.footer {
+    background: black;
+    height: 200px;
+}
+
+.small {
+    font-size: 1em;
+}
