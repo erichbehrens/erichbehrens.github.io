@@ -1,0 +1,16 @@
+.technologies {
+	& .list {
+		& .technology {
+			margin: 20px;
+			transition: 1s all ease;
+			display: inline-block;
+
+			&.visible {
+				opacity: 1;
+			}
+			&.hidden {
+				opacity: 0;
+			}
+		}
+	}
+}

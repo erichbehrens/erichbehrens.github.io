@@ -30,6 +30,14 @@ h3 {
     color: #dddccc;
 }
 
+ul {
+    list-style: none;
+}
+
+.page {
+    max-width: 800px;
+    margin: 0 auto;
+}
 .header {
     background: black;
     padding-bottom: 1em;
@@ -60,13 +68,18 @@ a:hover {
     color: #f6ff00;
 
     &:after {
-    transform: scaleX(1)
-}
+        transform: scaleX(1)
+    }
 }
 
 .footer {
     background: black;
     height: 200px;
+    z-index: 1;
+}
+
+.section {
+    padding-bottom: 1em;
 }
 
 .small {

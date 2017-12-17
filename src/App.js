@@ -2,13 +2,15 @@ import React from 'react';
 import './styles.css';
 import Header from './Header';
 import Footer from './Footer';
+import Technologies from './Technologies';
 import Repository from './Repository';
+import AppearAfter from './AppearAfter';
 
 const repositories = [
 	{
 		url: 'https://www.github.com/erichbehrens/react-animated-slider',
 		title: 'React animated slider',
-		description: 'Animated slider component for react',
+		description: 'Slider component with support for animations, SSR, touch/swipe interactions and much more.',
 		shields: [
 			{
 				alt: 'Circle CI',
@@ -30,7 +32,7 @@ const repositories = [
 	{
 		url: 'https://www.github.com/erichbehrens/pull-request-monitor',
 		title: 'GitHub Pull Request Monitor',
-		description: 'VS Code extension',
+		description: 'This VS Code extension uses the GitHub api to monitor the state of your pull requests and let you know when it\'s time to merge or if someone requested changes.',
 		shields: [
 			{
 				alt: 'Travis',
@@ -52,7 +54,7 @@ const repositories = [
 	{
 		url: 'https://www.github.com/erichbehrens/react-on-scroll',
 		title: 'React on scroll',
-		description: 'Animate on scroll, lazy loader, infinite scroll component for react',
+		description: 'Animate on scroll, lazy loader, infinite scroll component for react. ',
 		shields: [
 			{
 				alt: 'Travis',
@@ -74,7 +76,7 @@ const repositories = [
 	{
 		url: 'https://www.github.com/erichbehrens/erichbehrens.github.io',
 		title: 'This page 😉',
-		description: 'Just a simple react app deployed to GitHub Pages with Travis CI',
+		description: 'A simple react app deployed to GitHub Pages with Travis CI.',
 		shields: [
 			{
 				alt: 'Travis',
@@ -85,31 +87,18 @@ const repositories = [
 	},
 ];
 
-class ApperAfter extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { isVisible: false	};
-		setTimeout(() => this.setState({ isVisible: true }), props.delay || 1000);
-	}
-	render() {
-		const { isVisible } = this.state;
-		const { hidden = 'hidden', visible = 'visible', children } = this.props;
-		return React.cloneElement(children, {
-			className: [isVisible ? visible : hidden, children.props.className].filter(v => v).join(' '),
-		});
-	}
-}
-
 function App() {
 	return <div>
 		<Header />
-
-		<h2 className="main">Some cool projects I've been working on</h2>
-		<ul className="repositories">
-			{repositories.map((repo, index) => <li key={repo.url}>
-				<ApperAfter delay={(index + 1) * 500}><Repository value={repo} /></ApperAfter>
-			</li>)}
-		</ul>
+		<div className="page">
+			<Technologies />
+			<h2>Some cool projects I'm working on</h2>
+			<ul className="repositories">
+				{repositories.map((repo, index) => <li key={repo.url}>
+					<AppearAfter delay={(index + 1) * 1000}><Repository value={repo} /></AppearAfter>
+				</li>)}
+			</ul>
+		</div>
 		<Footer />
 	</div>;
 }
