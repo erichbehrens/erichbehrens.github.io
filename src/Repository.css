@@ -1,54 +1,60 @@
-.repository{
-    transition: 1s all ease-out;
-    margin-top: 1em;
-	margin-bottom: 3em;
+.repository {
+  transition: 1s all ease-out;
+  margin-top: 1em;
+  margin-bottom: 3em;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  & .title {
+    transition: 2s all linear;
 
     &.visible {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
     }
+
     &.hidden {
-        opacity: 0;
-        transform: translateY(200%);
+      opacity: 0;
     }
-    & .shields {
-        transition: 1s all ease-in;
-        transition-delay: .5s;
+  }
 
-        &.visible{
-           transform: scale(1);
-        }
+  & .shields {
+    transition: 1s all ease-in;
+    display: inline-block;
 
-        &.hidden{
-            transform: scale(0);
-        }
-
-        & .shield {
-            margin: 5px;
-		&:after { content: none; }
-        }
-    }
-    & .title {
-        transition: 1s all ease-out;
-
-        &.visible{
-           transform: translateY(0);
-        }
-
-        &.hidden{
-            transform: translateY(300%);
-        }
-    }
-    & .description {
-        transition: 1.5s all ease-in;
-
-       &.visible{
-           transform: translateY(0);
-        }
-
-        &.hidden{
-            transform: translateY(600%);
-        }
+    &.visible {
+      transform: scale(1);
     }
 
+    &.hidden {
+      transform: scale(0);
+    }
+
+    & .shield {
+      margin-right: 5px;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  & .description {
+    transition: 2s all ease-in;
+
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &.hidden {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
 }

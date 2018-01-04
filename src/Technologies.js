@@ -9,8 +9,11 @@ function Technologies() {
 	return (
 		<div className="section technologies">
 			<h2>Technologies I'm using</h2>
-			In more than 10 years working as a software developer
-			I've touched many technologies and languages.<br />
+			<p>
+				In more than 10 years working as a software developer
+				I've touched many technologies and languages on both
+				the client and server side, including databases.
+			</p>
 			Currently I'm mostly focused on:
 			<div className="list">
 				{technologies.map((item, index) => <AppearAfter

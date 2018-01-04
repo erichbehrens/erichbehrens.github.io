@@ -1,58 +1,68 @@
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif'); /* neuton / pridi / Headland One */
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Cabin'); /* neuton / pridi / Headland One */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Bree Serif', sans-serif;
-    font-size: 1.25em;
-    background: #111;
-    color: #dddccc;
-    text-align: center;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.25em;
+  background: #111;
+  color: #dddccc;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bree Serif', sans-serif;
+  color: #f6ff00;
+  text-align: center;
 }
 
 h1 {
-    font-size: 3em;
-    color: #f6ff00;
+  font-size: 3em;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-bottom: .25em;
-    color: #f6ff00;
+  font-size: 1.5em;
+  margin-bottom: .25em;
 }
 
 h3 {
-    font-size: 1.25em;
-    margin-bottom: .25em;
-    color: #dddccc;
+  font-size: 1.25em;
+  margin-bottom: .25em;
+}
+
+h4 {
+  font-size: 1.1em;
+  margin-bottom: .25em;
+  text-align: left;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 .page {
-    max-width: 800px;
-    margin: 0 auto;
-}
-.header {
-    background: black;
-    padding-bottom: 1em;
-
-    & h2 {
-        color: #dddccc;
-    }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 120px;
 }
 
 a {
-    text-decoration: none;
-    color: #fff568;
+  text-decoration: none;
+  color: #fff568;
   position: relative;
 
-    &:after {
+  &:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -61,27 +71,32 @@ a {
     transition: 0.4s;
     transform: scaleX(0);
     width: 100%;
-    }
+  }
 }
 
 a:hover {
-    color: #f6ff00;
+  color: #f6ff00;
 
-    &:after {
-        transform: scaleX(1)
-    }
+  &:after {
+    transform: scaleX(1);
+  }
+}
+
+.left {
+  text-align: left;
 }
 
 .footer {
-    background: black;
-    height: 200px;
-    z-index: 1;
+  background: black;
+  height: 200px;
+  z-index: 9999;
+  text-align: center;
 }
 
 .section {
-    padding-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 .small {
-    font-size: 1em;
+  font-size: 1em;
 }

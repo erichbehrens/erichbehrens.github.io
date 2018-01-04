@@ -1,0 +1,60 @@
+.subsection {
+  transition: 1s all ease-in;
+  padding-bottom: 10px;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  & .experience {
+    clear: both;
+
+    & .summary {
+      width: 50%;
+      float: left;
+
+      @media (max-width: 768px) {
+        width: auto;
+      }
+    }
+
+    & .description {
+      width: 50%;
+      float: left;
+
+      @media (max-width: 768px) {
+        width: auto;
+      }
+    }
+
+    &.personal {
+      & .summary {
+        width: 130px;
+        float: left;
+      }
+
+      & .description {
+        width: calc(100% - 130px);
+        float: left;
+      }
+    }
+
+    & .dates {
+      display: inline-block;
+      width: 120px;
+      color: #f6ff00;
+      text-align: right;
+      margin-right: 10px;
+    }
+  }
+}

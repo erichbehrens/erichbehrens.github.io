@@ -1,12 +1,11 @@
 import React from 'react';
-import './styles.css';
+import './Header.css';
 
-function Header() {
+function Header({ sticked, className }) {
 	return (
-		<div className="header">
-			<h1>Erich Behrens</h1>
-			<h2>Frontend developer</h2>
-            me@eb1.it
+		<div className={className}>
+			<h1 className={`primary ${sticked ? 'sticky' : 'inline'}`}>Erich Behrens</h1>
+			<h2 className={`secondary ${sticked ? 'sticky' : 'inline'}`}>Frontend developer</h2>
 		</div>
 	);
 }

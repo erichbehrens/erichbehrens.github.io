@@ -4,7 +4,7 @@ import './Repository.css';
 function Repository({ value, className }) {
 	return (
 		<div className={`repository ${className}`}>
-			<h3 className={`title ${className}`}>{value.title}</h3>
+			<h3 className={`title left ${className}`}>{value.title}</h3>
 			<div>
 				<span className="small">{value.type}</span>
 				<div className={`shields ${className}`}>
