@@ -72,7 +72,7 @@ const repositories = [
 	{
 		url: 'https://www.github.com/erichbehrens/erichbehrens.github.io',
 		title: 'This page 😉',
-		description: 'A simple react app deployed to GitHub Pages with Travis CI.',
+		description: 'A simple workflow for building a react app and deploy it to GitHub Pages with Travis CI. Includes a static build to improve page load time and seo.',
 		shields: [
 			{
 				alt: 'Travis',
