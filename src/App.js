@@ -4,7 +4,6 @@ import './styles.css';
 import Header from './Header';
 import Footer from './Footer';
 import Bio from './Bio';
-import Technologies from './Technologies';
 import Projects from './Projects';
 
 class App extends React.Component {
@@ -27,7 +26,6 @@ class App extends React.Component {
 					<Header sticked={stickyHeader} className={`header ${stickyHeader ? 'sticky' : 'inline'}`} />
 					<div className="page">
 						<Bio />
-						<Technologies />
 						<Projects />
 					</div>
 					<Footer />
