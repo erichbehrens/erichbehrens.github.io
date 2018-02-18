@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: [
+		'babel-polyfill',
 		'react-hot-loader/patch',
 		'./src/index.js', // your app's entry point
 	],
