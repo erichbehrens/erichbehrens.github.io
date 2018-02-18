@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.prod.js --progress -p",
     "lint": "eslint src",
     "deploy": "gh-pages -b master -d build"
   },

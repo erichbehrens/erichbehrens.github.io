@@ -1,16 +1,18 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 module.exports = {
 	entry: [
 		'babel-polyfill',
-		'react-hot-loader/patch',
 		'./src/index.js', // your app's entry point
 	],
 	output: {
 		path: path.join(__dirname, 'build'),
 		filename: './bundle.js',
+		libraryTarget: 'umd',
 	},
 
 	module: {
@@ -26,11 +28,11 @@ module.exports = {
 
 	plugins: [
 		new ExtractTextPlugin('styles.css'),
-		new HtmlWebpackPlugin({
-			template: './src/index.html',
-			files: {
-				css: ['style.css'],
-				js: ['index.js'],
+		new StaticSiteGeneratorPlugin('main'),
+		new CopyWebpackPlugin([{ context: path.resolve(__dirname), from: '*CNAME' }]),
+		new webpack.optimize.UglifyJsPlugin({
+			output: {
+				comments: false,
 			},
 		}),
 	],
