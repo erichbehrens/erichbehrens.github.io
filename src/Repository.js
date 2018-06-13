@@ -7,7 +7,7 @@ function Repository({ value, className }) {
 			<h3 className={`title left ${className}`}>{value.title}</h3>
 			<div>
 				<span className="small">{value.type}</span>
-				<div className={`shields ${className}`}>
+				{value.shields && <div className={`shields ${className}`}>
 					{value.shields.map(shield => (
 						<a
 							key={shield.alt}
@@ -18,11 +18,14 @@ function Repository({ value, className }) {
 							<img src={shield.src} alt={shield.alt} />
 						</a>
 					))}
-				</div>
+				</div>}
 				<div className={`description ${className}`}>
-					{value.description}
-					<br />
-					<a href={value.url} target="_blank">View on GitHub</a>
+					<div className="content">
+						{value.description}
+					</div>
+					<div className="actionLink">
+						<a href={value.url} target="_blank">{value.action || 'View on GitHub'}</a>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -4,6 +4,12 @@ import AnimateOnScroll from './AnimateOnScroll';
 
 const repositories = [
 	{
+		url: 'https://eb1.it/react-components',
+		title: 'React components',
+		description: 'A showcase of some react components I\'ve built',
+		action: 'Go to demo',
+	},
+	{
 		url: 'https://www.github.com/erichbehrens/react-animated-slider',
 		title: 'React animated slider',
 		description: 'Slider component with support for animations, SSR, touch/swipe interactions and much more.',

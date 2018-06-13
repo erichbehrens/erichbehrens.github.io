@@ -63,5 +63,10 @@
       opacity: 0;
       transform: translateY(100%);
     }
+
+    & .content,
+    & .actionLink{
+      margin: 10px 0;
+    }
   }
 }
