@@ -76,6 +76,23 @@ const repositories = [
 		],
 	},
 	{
+		url: 'https://www.github.com/erichbehrens/screen-recorder',
+		title: 'Screen Recorder',
+		description: 'Chrome extension to record video from camera, screen, specific window or tab.',
+		shields: [
+			{
+				alt: 'Chrome Webstore users',
+				url: 'https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden',
+				src: 'https://img.shields.io/chrome-web-store/users/hniebljpgcogalllopnjokppmgbhaden.svg',
+			},
+			{
+				alt: 'Chrome Webstore rating',
+				url: 'https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden',
+				src: 'https://img.shields.io/chrome-web-store/rating/hniebljpgcogalllopnjokppmgbhaden.svg',
+			},
+		],
+	},
+	{
 		url: 'https://www.github.com/erichbehrens/erichbehrens.github.io',
 		title: 'This page 😉',
 		description: 'A simple workflow for building a react app and deploy it to GitHub Pages with Travis CI. Includes a static build to improve page load time and seo.',
