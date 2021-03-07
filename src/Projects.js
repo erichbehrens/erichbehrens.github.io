@@ -4,10 +4,22 @@ import AnimateOnScroll from './AnimateOnScroll';
 
 const repositories = [
 	{
-		url: 'https://eb1.it/react-components',
-		title: 'React components',
-		description: 'A showcase of some react components I\'ve built',
-		action: 'Go to demo',
+		url: 'https://scre.io',
+		title: 'Screen Recorder',
+		description: 'Web app & browser extension to record video from camera, screen, specific window or tab.',
+		shields: [
+			{
+				alt: 'Chrome Webstore users',
+				url: 'https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden',
+				src: 'https://img.shields.io/chrome-web-store/users/hniebljpgcogalllopnjokppmgbhaden.svg',
+			},
+			{
+				alt: 'Chrome Webstore rating',
+				url: 'https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden',
+				src: 'https://img.shields.io/chrome-web-store/rating/hniebljpgcogalllopnjokppmgbhaden.svg',
+			},
+		],
+		action: 'View website',
 	},
 	{
 		url: 'https://www.github.com/erichbehrens/react-animated-slider',
@@ -30,6 +42,12 @@ const repositories = [
 				src: 'https://img.shields.io/npm/dt/react-animated-slider.svg',
 			},
 		],
+	},
+	{
+		url: 'https://eb1.it/react-components',
+		title: 'React components',
+		description: 'A showcase of some react components I\'ve built',
+		action: 'Go to demo',
 	},
 	{
 		url: 'https://www.github.com/erichbehrens/pull-request-monitor',
@@ -72,23 +90,6 @@ const repositories = [
 				alt: 'npm downloads',
 				url: 'https://www.npmjs.com/package/react-on-scroll',
 				src: 'https://img.shields.io/npm/dt/react-on-scroll.svg',
-			},
-		],
-	},
-	{
-		url: 'https://www.github.com/erichbehrens/screen-recorder',
-		title: 'Screen Recorder',
-		description: 'Chrome extension to record video from camera, screen, specific window or tab.',
-		shields: [
-			{
-				alt: 'Chrome Webstore users',
-				url: 'https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden',
-				src: 'https://img.shields.io/chrome-web-store/users/hniebljpgcogalllopnjokppmgbhaden.svg',
-			},
-			{
-				alt: 'Chrome Webstore rating',
-				url: 'https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden',
-				src: 'https://img.shields.io/chrome-web-store/rating/hniebljpgcogalllopnjokppmgbhaden.svg',
 			},
 		],
 	},
